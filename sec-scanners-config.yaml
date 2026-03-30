@@ -1,0 +1,14 @@
+module-name: gpu-module
+kind: kyma
+rc-tag: 0.1.0
+bdba:
+  - europe-docker.pkg.dev/kyma-project/prod/gpu-module:main
+  - europe-docker.pkg.dev/kyma-project/prod/gpu-module:0.1.0
+mend:
+  language: golang-mod
+  exclude:
+    - "**/*_test.go"
+checkmarx-one:
+  preset: go-default
+  exclude:
+    - '**/*_test.go'
